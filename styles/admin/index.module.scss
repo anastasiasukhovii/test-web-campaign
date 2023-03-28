@@ -1,0 +1,87 @@
+@use 'styles/colors';
+
+@mixin outline($color) {
+  border: 1px solid $color;
+  border-radius: 0.5rem;
+}
+
+.informationBar {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.campaignOverview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  padding-top: 2rem;
+  gap: 2rem;
+  height: 40vh;
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.statsRow {
+  gap: 1rem;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: colors.$bg-white;
+  border-radius: 1.25rem;
+  padding: 2.25rem 1.25rem;
+  & > div {
+    overflow: hidden;
+  }
+}
+
+.cardText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container {
+  @include outline(#dfe0eb);
+  padding: 1rem;
+}
+
+.statRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 3.5rem;
+  padding: 1rem;
+
+  border-bottom: 1px solid #dfe0eb;
+  &.last {
+    border: none;
+  }
+}
+
+.legend {
+  width: 1rem;
+  height: 1rem;
+}
+
+.approvalCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid black;
+  flex: 1;
+  min-height: fit-content;
+
+  padding: 1rem 1rem;
+  border-radius: 1.5rem;
+}

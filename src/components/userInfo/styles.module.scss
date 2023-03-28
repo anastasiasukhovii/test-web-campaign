@@ -1,0 +1,9 @@
+@use 'styles/colors';
+
+.address {
+  color: colors.$medium-gray;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}

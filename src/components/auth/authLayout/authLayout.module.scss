@@ -1,0 +1,29 @@
+@use 'styles/colors';
+
+.authPageWrapper {
+  height: calc(100vh - 70px);
+  background: colors.$bg-white;
+  overflow: scroll;
+
+  .authPage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    .logo {
+      height: 5.5rem;
+      width: 5.625rem;
+    }
+    @media screen and (max-width: 768px) {
+      // gap: 10px;
+      height: 100vh;
+      .logo {
+        height: 4.5rem;
+        width: 4.625rem;
+      }
+    }
+  }
+}

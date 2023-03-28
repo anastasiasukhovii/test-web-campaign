@@ -1,0 +1,49 @@
+{
+  "name": "updoot-fan",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@mantine/carousel": "^5.8.2",
+    "@mantine/core": "^5.8.2",
+    "@mantine/dates": "^5.9.5",
+    "@mantine/dropzone": "^5.8.2",
+    "@mantine/form": "^5.8.3",
+    "@mantine/hooks": "^5.8.2",
+    "@mantine/next": "^5.8.2",
+    "@svgr/webpack": "^6.5.1",
+    "@uiw/react-color-circle": "^1.1.2",
+    "@virtualeconomy/js-vsys": "^0.2.4",
+    "aws-amplify": "^5.0.4",
+    "chart.js": "^4.0.1",
+    "dayjs": "^1.11.7",
+    "embla-carousel-react": "^7.1.0",
+    "next": "^12.3.3",
+    "nextjs-progressbar": "^0.0.16",
+    "react": "18.2.0",
+    "react-chartjs-2": "^5.0.1",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "react-phone-number-input": "^3.2.13",
+    "react-share": "^4.4.1",
+    "sass": "^1.56.1"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "chartjs-adapter-moment": "^1.0.1",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.4",
+    "moment": "^2.29.4",
+    "prettier": "^2.7.1",
+    "typescript": "4.9.3"
+  }
+}

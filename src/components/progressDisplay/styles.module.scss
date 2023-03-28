@@ -1,0 +1,18 @@
+@use 'styles/colors';
+
+.progressCard {
+  background-color: colors.$bg-white;
+  border-radius: 1.25rem;
+  padding: 2.25rem;
+}
+
+.progressLineBreak {
+  border-top: 0.5px solid black;
+  margin-block: 1rem;
+}
+
+.goalLabel {
+  background-color: colors.$bg-purple;
+  padding: 0 1rem 0 1rem;
+  border-radius: 1rem;
+}

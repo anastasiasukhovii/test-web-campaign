@@ -1,0 +1,33 @@
+@use 'styles/colors';
+
+.statcardContainer {
+  border-radius: 1.5rem;
+  background-color: colors.$bg-white;
+  margin: 0 !important;
+}
+
+.sponsorLabel {
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  align-items: center;
+  gap: 1rem;
+  min-width: fit-content;
+}
+
+.sponsorContainer {
+  max-width: 60%;
+}
+
+.sponsorModalContainer {
+  min-height: 60%;
+}
+
+.seeMoreButton {
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}

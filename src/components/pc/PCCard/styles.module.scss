@@ -1,0 +1,64 @@
+@use 'styles/colors';
+
+.container {
+  height: 18rem;
+  border: 1px solid #ededed;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  gap: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: all 0.5s ease;
+    z-index: 2;
+    background-color: #ededed40;
+  }
+  &:hover::before,
+  &:focus-within::before {
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+.imgContainer {
+  height: 50%;
+  border: 1px solid #ededed;
+}
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.imageFallback {
+  display: block;
+  position: absolute;
+  height: 50%; //equal to image height
+  width: 100%;
+}
+
+.bottom {
+  z-index: 3;
+}
+
+.badge {
+  width: 20px;
+}
+
+.iconButton {
+  border: 1px solid colors.$secondary;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.requestText {
+  background-color: colors.$muted-orange;
+  padding: 0.5rem;
+  border-radius: 10px;
+}

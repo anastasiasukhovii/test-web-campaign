@@ -1,0 +1,37 @@
+@use 'styles/colors';
+
+.topContainer {
+  height: 20%;
+  margin-block: 2rem;
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    height: max-content;
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  background-color: colors.$bg-white;
+  border-radius: 1.25rem;
+  padding: 2.25rem;
+  height: 100%;
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
+}
+
+.image {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  height: 5rem;
+}
+
+.tabs {
+  position: sticky;
+  top: calc(10vh - 1rem);
+  z-index: 5;
+  background-color: white;
+  padding-top: 1rem;
+  width: 100%;
+}

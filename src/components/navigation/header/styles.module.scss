@@ -1,0 +1,59 @@
+@use 'styles/colors';
+
+.container {
+  transition: all 1s ease;
+  overflow: hidden;
+  align-items: center;
+  min-height: 4rem;
+  @media screen and (max-width: 768px) {
+    z-index: 1e12;
+  }
+}
+
+.header {
+  transition: height 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 4%;
+  background-color: colors.$white;
+  height: 5rem;
+}
+
+.opened {
+  @media screen and (max-width: 767px) {
+    height: 70vh;
+    max-height: 70vh;
+    border-radius: 0 0 30px 30px;
+  }
+}
+
+.updoot {
+  overflow: inherit;
+  width: fit-content;
+}
+
+.utilContainer {
+  width: 25%;
+  gap: 1.5rem;
+  min-width: fit-content;
+  display: inherit;
+
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hamburger {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.createCampaignButton{
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+}

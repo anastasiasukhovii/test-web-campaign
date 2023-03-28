@@ -1,0 +1,97 @@
+@use 'styles/colors';
+
+@mixin button($padding-inline, $padding-block) {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 2.5rem;
+  padding: $padding-inline $padding-block;
+  transition: all 0.3s ease;
+  & > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin primary($color) {
+  background-color: $color;
+  color: colors.$white;
+  border: none;
+  &:hover {
+    background-color: colors.$primary-hover;
+  }
+}
+
+@mixin secondary($color) {
+  border: 1.25px solid $color;
+  color: $color;
+  background: none;
+  &:hover {
+    border-color: colors.$secondary-hover;
+    color: colors.$secondary-hover;
+  }
+}
+
+.sm {
+  @include button(0.5rem, 1rem);
+}
+
+.md {
+  @include button(0.75rem, 1.5rem);
+}
+
+.lg {
+  @include button(1rem, 2rem);
+}
+
+.xl {
+  @include button(1.25rem, 2.5rem);
+}
+
+.primary-purple {
+  @include primary(colors.$primary);
+}
+
+.primary-black {
+  @include primary(colors.$secondary);
+}
+
+.primary-red {
+  background-color: colors.$muted-red;
+  color: colors.$black;
+  border: none;
+  &:hover {
+    background-color: rgba($color: colors.$red, $alpha: 0.4);
+  }
+}
+
+.primary-blue {
+  background-color: colors.$muted-blue;
+  color: colors.$black;
+  border: none;
+  &:hover {
+    background-color: rgba($color: colors.$blue, $alpha: 0.4);
+  }
+}
+
+.secondary-purple {
+  @include secondary(colors.$primary);
+}
+
+.secondary-black {
+  @include secondary(colors.$secondary);
+}
+
+.disabled {
+  background-color: colors.$pale-gray;
+  color: colors.$white;
+  border: none;
+  &:hover {
+    cursor: not-allowed;
+  }
+}

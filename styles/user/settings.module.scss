@@ -1,0 +1,60 @@
+@use 'styles/colors';
+
+.container {
+  justify-content: space-between;
+  gap: 1rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.label {
+  min-width: 12.5rem;
+  @media screen and (max-width: 768px) {
+    flex: 1;
+    min-width: fit-content;
+  }
+}
+
+.image {
+  width: 6.5rem;
+  height: 6.5rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.infoCard {
+  background-color: colors.$bg-white;
+  border: 1px solid colors.$light-gray;
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.infoText {
+  color: colors.$medium-gray;
+}
+
+.mobileRow {
+  @media screen and (max-width: 1000px) {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+.responsivePicContainer {
+  align-items: flex-start;
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-updoot-dev-160232-authRole",
+      "UnauthRoleArn": "arn:aws:iam::578741260233:role/amplify-updoot-dev-160232-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::578741260233:role/amplify-updoot-dev-160232-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-updoot-dev-160232-deployment",
+      "UnauthRoleName": "amplify-updoot-dev-160232-unauthRole",
+      "StackName": "amplify-updoot-dev-160232",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:578741260233:stack/amplify-updoot-dev-160232/466f4fd0-a919-11ed-b981-0678be6ce9c0",
+      "AmplifyAppId": "d1svi5t3mkcqoc"
+    },
+    "categories": {
+      "auth": {
+        "updootae73bd82": {},
+        "updootf73846e3": {},
+        "true": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+@use 'styles/colors';
+
+@font-face {
+  font-family: Pretendard;
+  src: url('./fonts/Pretendard-Thin.otf');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Pretendard;
+  src: url('./fonts/Pretendard-ExtraLight.otf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: Pretendard;
+  src: url('./fonts/Pretendard-Light.otf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Pretendard;
+  src: url('./fonts/Pretendard-Regular.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Pretendard;
+  src: url('./fonts/Pretendard-Medium.otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Pretendard;
+  src: url('./fonts/Pretendard-SemiBold.otf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Pretendard;
+  src: url('./fonts/Pretendard-Bold.otf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Pretendard;
+  src: url('./fonts/Pretendard-ExtraBold.otf');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Pretendard;
+  src: url('./fonts/Pretendard-Black.otf');
+  font-weight: 900;
+}
+
+@mixin text-options($font-size, $font-weight, $line-height) {
+  font-family: Pretendard;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: 0em;
+  text-align: left;
+  color: colors.$black;
+}
+
+.heading1 {
+  @include text-options(1.75rem, 600, 2rem);
+}
+
+.heading2 {
+  @include text-options(1.5rem, 600, 1.5rem);
+}
+
+.heading3 {
+  @include text-options(1.25rem, 500, 1.25rem);
+}
+
+.heading4 {
+  @include text-options(1.15rem, 500, 1.5rem);
+}
+
+.subheading1 {
+  @include text-options(0.95rem, 400, 1.5rem);
+}
+
+.subheading2 {
+  @include text-options(0.9rem, 500, 1.25rem);
+}
+
+.subheading3 {
+  @include text-options(0.85rem, 500, 1.25rem);
+}
+
+.body {
+  @include text-options(0.9rem, 400, 1.25rem);
+}

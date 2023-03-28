@@ -1,0 +1,37 @@
+@use 'styles/colors';
+
+.tabsElement {
+  :global {
+    .mantine-Tabs-panel {
+      margin-top: 1rem;
+      height: 100%;
+    }
+  }
+}
+
+@mixin sticky {
+  position: sticky;
+  top: 4rem;
+  z-index: 5;
+  background-color: colors.$white;
+  width: 100%;
+}
+
+.tabContainer {
+  @media screen and (max-width: 720px),
+    (min-width: 768px) and (max-width: 1100px) {
+    display: none;
+  }
+  padding-top: 1rem;
+  @include sticky;
+}
+
+.select {
+  @media screen and (max-width: 720px),
+    (min-width: 768px) and (max-width: 1100px) {
+    display: block;
+  }
+  padding-top: 2rem;
+  display: none;
+  @include sticky;
+}

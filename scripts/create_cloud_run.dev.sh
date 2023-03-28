@@ -1,0 +1,12 @@
+gcloud beta run deploy web-campaign\
+    --image=asia-southeast1-docker.pkg.dev/updoot-web-dev/updoot/web-campaign:latest \
+    --allow-unauthenticated \
+    --port=3000 \
+    --memory=256Mi \
+    --max-instances=1 \
+    --no-use-http2 \
+    --cpu-throttling \
+    --execution-environment=gen1 \
+    --platform=managed \
+    --region=asia-southeast1 \
+    --project=updoot-web-dev

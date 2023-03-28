@@ -1,0 +1,118 @@
+@use 'styles/colors';
+@use 'src/components/typography/styles.module.scss' as typography;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+ul {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+* {
+  box-sizing: border-box;
+}
+
+.authLoader {
+  background-color: colors.$bg-white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Override phone-number-input
+.PhoneInput {
+  max-width: 450px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0.75rem;
+  background-color: #fff;
+}
+.PhoneInputCountry {
+  width: 20%;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.PhoneInputInput {
+  margin-bottom: 0;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  padding: 0 1rem;
+  @include typography.text-options(18px, 400, 22px);
+}
+
+// Override mantine input fields
+.mantine-TextInput-input,
+.mantine-PasswordInput-input {
+  @include typography.text-options(18px, 400, 22px);
+}
+
+.mantine-Input-input {
+  border-color: colors.$light-gray;
+  &:focus {
+    border-color: colors.$secondary-hover;
+  }
+  input[type='text' i] {
+    padding: 1rem;
+  }
+}
+
+.mantine-TextInput-input {
+  padding: 1.5rem 1rem;
+  font-size: 14px;
+}
+
+.mantine-Textarea-input {
+  padding: 1rem;
+}
+
+.mantine-DatePicker-input {
+  @media screen and (min-width: 768px) {
+    padding: 1rem 2rem;
+  }
+}
+
+.mantine-InputWrapper-label {
+  margin-bottom: 10px;
+  // @include typography.text-options(20px, 500, 26px);
+  @include typography.text-options(18px, 500, 22px); //Subherading2
+}
+
+.mantine-AppShell-root {
+  @media screen and (min-width: 768px) {
+    padding-inline: 3rem;
+  }
+}
+
+.PCCardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+}
+
+.mantine-Modal-root {
+  @media screen and (max-width: 768px) {
+    top: 4rem;
+  }
+}
+
+.mantine-Select-item {
+  &[data-selected] {
+    &:hover {
+      background-color: colors.$primary;
+      color: colors.$white;
+    }
+    background-color: transparent;
+    color: colors.$primary;
+  }
+}

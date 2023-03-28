@@ -1,0 +1,50 @@
+@use 'styles/colors';
+
+@mixin image {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carouselImagePreview {
+  @include image;
+  object-fit: contain;
+}
+
+.carouselImage {
+  @include image;
+  border: 1px solid colors.$light-gray;
+}
+
+.detailsText {
+  border-radius: 10;
+  text-align: left;
+  white-space: pre-line;
+  padding-right: 1rem;
+}
+
+.titleImage {
+  height: 15rem;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.titleImageFallback {
+  object-fit: contain;
+  height: 15rem;
+  padding: 1rem;
+  border: 1px solid colors.$light-gray;
+  border-radius: 10px;
+}
+
+.socialMediaButton {
+  border: 1px solid;
+  border-radius: 50%;
+  height: fit-content;
+  padding: 0.5rem;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

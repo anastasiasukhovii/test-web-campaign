@@ -1,0 +1,32 @@
+@use 'styles/colors';
+
+.wallet {
+  display: flex;
+  align-items: flex-start;
+  width: 18.75rem;
+  min-width: fit-content;
+  padding: 1.875rem;
+  border-radius: 1rem;
+  background-color: colors.$bg-white;
+}
+
+.topContainer {
+  @media screen and (max-width: 1100px) {
+    & > * {
+      width: 100%;
+    }
+    flex-direction: column;
+  }
+}
+
+.numberDisplay {
+  font-size: xx-large;
+  @media screen and (max-width: 1100px) {
+    font-size: 0.9rem;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-weight: 700;
+    color: colors.$primary;
+    gap: 0.25rem;
+  }
+}

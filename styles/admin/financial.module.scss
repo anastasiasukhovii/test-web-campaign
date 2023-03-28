@@ -1,0 +1,30 @@
+@use 'styles/colors';
+
+@mixin outline {
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding-block: 1rem;
+  background-color: colors.$bg-white;
+}
+
+.outline1 {
+  @include outline();
+  padding-right: 10%;
+  padding-left: 2rem;
+}
+
+.outline2 {
+  flex: 1;
+  @media screen and (max-width: 975px) {
+    @include outline();
+    padding-inline: 5%;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.topContainer {
+  @media screen and (max-width: 975px) {
+    flex-direction: column;
+  }
+}
